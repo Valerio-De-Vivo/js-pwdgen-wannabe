@@ -2,5 +2,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: aqua;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.generatore {
+  width: 500px;
+  padding: 50px;
+  background-color: lightgrey;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#password {
+  width: 90%;
+  height: 50px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.331);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: green;
+  position: relative;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#password::after {
+  animation: progress 5s;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 8px;
+  background-color: greenyellow;
+}
+
+@keyframes progress {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
